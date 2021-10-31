@@ -1,5 +1,6 @@
 const express = require( 'express' );
 const mongoose = require( "mongoose" );
+const cors = require( 'cors' );
 
 const qnController = require( "./db/question_controller" );
 const configs = require( "./configs/configs" );
@@ -8,6 +9,7 @@ const dbErr = require( "./common/error_msgs/db_errors" );
 
 const app = express();
 app.use( express.json() );
+app.use( cors() );
 const port = 3000;
 
 const setErrorMessage = ( errMessage, code ) => ( req, res ) => {
