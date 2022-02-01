@@ -1,3 +1,6 @@
 node_modules/
 .env
 user-microservice
+chat-microservice
+match-microservice
+questions-microservice
